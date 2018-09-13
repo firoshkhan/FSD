@@ -1,0 +1,29 @@
+﻿@using Assignment20.Models;
+@model IEnumerable<Assignment20.Models.TWEET>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TweetLayout.cshtml";
+}
+
+
+<div class="container body-content">
+    <div style="width:33.33%;height:200px; background-color:red;position:relative;float:left;">
+
+       @{Html.RenderPartial("Index", Model);}
+    </div>
+    <div style="width:33.34%;background-color:blue;position:relative;float:left; top: 0px; left: 0px; height: 21px;">
+
+        @{Html.RenderAction("Create","TWEETs");}
+    </div>
+    </div>
+    <div style="width:33.33%;position:relative;float:right;background-color:Green">
+        Section 3
+    </div>
+
+    <hr />
+    <footer>
+        <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+    </footer>
+</div>

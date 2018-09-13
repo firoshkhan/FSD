@@ -1,0 +1,65 @@
+﻿@model IEnumerable<Assignment20.Models.PERSON>
+
+
+@{
+
+    Layout = null;
+
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    <div style="align-content:center" >
+        <br /><br />
+    <div style="text-align:left;padding-left:5px">
+        <span style="text-align:left;padding-left:5px"> Search Twitter</span><br />
+    </div>
+    <div class="form-group">
+        <div class="col-sm-12 col-md-12 col-lg-12" >
+            <div id="imaginary_container">
+             
+                <div class="input-group stylish-input-group" style="text-align:left">                 
+                    <input type="text" name="txtsearchUserName" class="form-control" placeholder="Search Twitter">
+                    <span class="input-group-addon">
+                        <button type="submit" name="searchUserName" value="Tweet" class="btn btn-default btn-xs">
+                            <span class="glyphicon glyphicon-search fa-lg"  ></span>
+                        </button>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+
+}
+
+            @if (Model != null)
+            {
+              
+                foreach (var item in Model)
+                {
+                    <tr>
+
+                        <td>
+                            @Html.DisplayFor(modelItem => item.fullname)
+                        </td>
+
+                        <td>
+                            @@ @Html.DisplayFor(modelItem => item.User_Id)
+                        </td>
+
+                        <td style="text-align:center">
+                                                     
+                            @Html.ActionLink("Follow", "AddFollows", new { id = Session["UserID"], FollowUserid = item.User_Id }, new { @class = "btn btn-default btn-large" })
+                                                       
+
+                        </td>
+                        <td>
+                            &nbsp;
+                        </td>
+                    </tr>
+                }
+           
+            }
+

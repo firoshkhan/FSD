@@ -1,0 +1,6 @@
+D:\desktop July 26 2018\FSD\Assesment1\Assesment1\Calc_Assignment21\bin\Debug\Calc_Assignment21.dll.config
+D:\desktop July 26 2018\FSD\Assesment1\Assesment1\Calc_Assignment21\bin\Debug\Calc_Assignment21.dll
+D:\desktop July 26 2018\FSD\Assesment1\Assesment1\Calc_Assignment21\bin\Debug\Calc_Assignment21.pdb
+D:\desktop July 26 2018\FSD\Assesment1\Assesment1\Calc_Assignment21\obj\Debug\Calc_Assignment21.dll
+D:\desktop July 26 2018\FSD\Assesment1\Assesment1\Calc_Assignment21\obj\Debug\Calc_Assignment21.pdb
+D:\desktop July 26 2018\FSD\Assesment1\Assesment1\Calc_Assignment21\obj\Debug\Calc_Assignment21.csprojResolveAssemblyReference.cache

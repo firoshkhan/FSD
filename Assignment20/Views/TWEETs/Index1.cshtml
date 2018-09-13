@@ -1,0 +1,68 @@
+﻿@using Assignment20.Models;
+@model IEnumerable<Assignment20.Models.TWEET>
+
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_TweetLayout.cshtml";
+   // fullname= Session["fullname"];
+}
+
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        
+        <div class="col-sm-8 col-md-8 col-lg-8;pull-right" style="background-color:white;text-align:right">
+            <span >Welcome @Session["fullname"] </span>
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4;pull-right;" style="background-color:white;text-align:right">
+          
+            <span>@Html.ActionLink("Home", "Edit") |
+            @Html.ActionLink("Profile", "Details", "People", routeValues: new{id = Session["UserID"] },htmlAttributes: null)|
+            @Html.ActionLink("Sign out", "Login", "People")</span>
+
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="col-sm-12 col-md-12 col-lg-12 ;d-flex justify-content-center" style="background-color:white;text-align:center">
+            <H3 style="text-align:center;">Welcome  to my Twitter clone</H3>
+        </div>
+        <hr />
+    </div>
+        <div class="row divborder">
+            <div class="col-sm-3 col-md-3 col-lg-3" style="background-color:white;height:100%;">
+                <div class="row " style="background-color:white;height:100%;">
+
+                    <div style="background-color:white;text-align:right;height:100%;">
+
+
+                        <span>@{Html.RenderAction("Search", "People");} </span>  <br />
+
+                        <span>@{Html.RenderAction("GetFollows", "TWEETs");} </span>  <br />
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-9 col-md-9 col-lg-9" ">
+                <div class="row divborder" STYLE="padding-left: 30px;">
+                    <div class="col-sm-10 col-md-10 col-lg-10" style="background-color:WHITE;">
+                        <p>@{Html.RenderAction("Create", "TWEETs");}</p>
+                    </div>
+                </div>
+                <div>
+                </div>
+                    <div class="row divborder">
+                        <div class="col-sm-12 col-md-12 col-lg-12" style="background-color:WHITE;">
+                            <p>@{Html.RenderAction("Index", "TWEETs");}</p>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>

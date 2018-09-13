@@ -1,0 +1,30 @@
+﻿@model IEnumerable<Assignment20.Models.TWEET>
+
+<h3>Tweets</h3>
+@{
+   
+    Layout = null;
+
+}
+
+
+<table class="table">
+  
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.PERSON.fullname)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.message)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.created)
+        </td>
+       
+       
+    </tr>
+}
+
+</table>
